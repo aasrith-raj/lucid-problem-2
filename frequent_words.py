@@ -15,15 +15,12 @@ for item in file_words:
     
 for i in range(0, 10):
     if item in read_words:
-        if item.count > (item-1).count:
+        if item.count > max:
             max = item.count
             top_word = item.word
-        else:
-            max = (item-1).count
-            top_word = (item-1).word
+
         top_words.word = top_word.word
         top_words.count = max
         read_words.pop(top_words.word)
-
 
 print(top_words)
